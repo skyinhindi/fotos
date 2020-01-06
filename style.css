@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    color: #222;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 18pt;
+    color: #2196F3;
+}
+
+a:hover{
+    color: #ccc;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 10pt;
+    font-size: 34pt;
+    text-shadow: 0.5px 0.5px 1px;
+}
+
+
+.loader{
+    align-content: center;
+    display: block;
+    margin: auto;
+    opacity: 1;
+    position: relative;
+    top: 45vh;
+}
+
+.loader img{
+    width: 100px;
+    height: 100px;
+    transition: 1s;
+    animation: rotate 3s linear infinite;
+}
+
+.container-main{
+    display: none;
+}
+
+.gallery{
+    grid-template-columns: 1fr 1fr 1fr;
+    display:grid;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.gallery img{
+    width:400px;
+    height: auto;
+    padding-bottom: 10px;
+    align-items: center;
+    margin: auto;
+    transition: 0.5s ;
+}
+
+.gallery img:hover{
+   filter: grayscale(100%);
+   transform: scale(1.05);
+}
+
+footer{
+    border-top: 3px #222 solid;
+    position: relative;
+    color: #222;
+    align-items: center;
+    margin: auto;
+    bottom: 0px;
+    min-height: 70px;
+    width: 100%;
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#footer-links-container{
+    display: -moz-inline-grid;
+    margin-top: 6px;
+}
+
+.footer-icons{
+  color: #2196F3; 
+  padding: 2px; 
+}
+
+/*Mobile Specific*/
+
+@media(max-width:940px){
+    .gallery{
+        grid-template-columns: 1fr;
+        display:grid;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+    } 
+
+    .gallery img{
+        width:300px;
+        height: auto;
+        padding-bottom: 10px;
+        align-items: center;
+        margin: auto;
+        transition: 0.5s ;
+    }
+
+    footer{
+        font-size: 18pt;
+    }
+
+    h1{
+        margin-left:40vw;
+    }
+
+}
+/*Animations*/
+
+@keyframes rotate{
+	to{
+		transform: rotate(360deg);
+	}
+}
